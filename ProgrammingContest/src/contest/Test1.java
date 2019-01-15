@@ -1,6 +1,7 @@
 package contest;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Test1 {
@@ -8,6 +9,9 @@ public class Test1 {
 		System.out.println("Hello world again");
 		
 		int A[] = {3,1,2,4,3};
+		List<int[]> list = Arrays.asList(A);
+		Collections.reverse(list);
+		list.forEach(s -> System.out.println(s));
 		
         int ret = 0;
 
@@ -15,6 +19,8 @@ public class Test1 {
 		for (int i=0;i<A.length;i++) {
 			sum+=A[i];
 		}
+		
+		Arrays.sort(A);
 		
 		int left = 0;
 		int right = sum;

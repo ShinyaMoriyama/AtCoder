@@ -1,5 +1,6 @@
 package contest;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -9,9 +10,16 @@ public class Test1 {
 		System.out.println("Hello world again");
 		
 		int A[] = {3,1,2,4,3};
-		List<int[]> list = Arrays.asList(A);
+		List<Integer> list = new ArrayList<>();
+		for(int a:A) {
+			list.add(a);
+		}
 		Collections.reverse(list);
-		list.forEach(s -> System.out.println(s));
+		
+		for (Integer a:list) {
+			System.out.println(a);
+			System.out.println((int)a);
+		}
 		
         int ret = 0;
 
